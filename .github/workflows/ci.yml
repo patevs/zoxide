@@ -33,7 +33,7 @@ jobs:
           components: rustfmt
           profile: minimal
           toolchain: nightly
-      - uses: cachix/install-nix-action@v21
+      - uses: cachix/install-nix-action@v22
         if: ${{ matrix.os != 'windows-latest' }}
         with:
           nix_path: nixpkgs=channel:nixos-unstable
@@ -43,7 +43,7 @@ jobs:
           authToken: ${{ env.CACHIX_AUTH_TOKEN }}
           name: zoxide
       - name: Setup cache
-        uses: Swatinem/rust-cache@v2.4.0
+        uses: Swatinem/rust-cache@v2.5.0
         with:
           key: ${{ matrix.os }}
       - name: Install just
