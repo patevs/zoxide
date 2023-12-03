@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Added
+
+- Nushell: support for v0.86.0.
+
 ## [0.9.2] - 2023-08-04
 
 ### Added
@@ -22,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Fish/Zsh: aliases on `__zoxide_z` will now use completions.
-- Nushell: add support for v0.78.0.
+- Nushell: support for v0.78.0.
 - Fish: plugin now works on older versions.
 - PowerShell: warn when PowerShell version is too old for `z -` and `z +`.
 - PowerShell: support for PWD hooks on all versions.
