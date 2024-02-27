@@ -76,7 +76,7 @@ zoxide can be installed in 4 easy steps:
    please [open an issue][issues].
 
    <details>
-   <summary>Linux</summary>
+   <summary>Linux / WSL</summary>
 
    > The recommended way to install zoxide is via the install script:
    >
@@ -107,6 +107,7 @@ zoxide can be installed in 4 easy steps:
    > | ~Raspbian 11+~[^1]  | ~[Raspbian Packages]~   | ~`apt install zoxide`~                                                                                |
    > | Rhino Linux         | [Pacstall Packages]     | `pacstall -I zoxide-deb`                                                                              |
    > | Slackware 15.0+     | [SlackBuilds]           | [Instructions][slackbuilds-howto]                                                                     |
+   > | Solus               | [Solus Packages]        | `eopkg install zoxide`                                                                                |
    > | ~Ubuntu 21.04+~[^1] | ~[Ubuntu Packages]~     | ~`apt install zoxide`~                                                                                |
    > | Void Linux          | [Void Linux Packages]   | `xbps-install -S zoxide`                                                                              |
 
@@ -137,6 +138,9 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Windows</summary>
 
+   > zoxide works with PowerShell, as well as shells running in Cygwin, Git
+   > Bash, and MSYS2.
+   >
    > The recommended way to install zoxide is via `winget`:
    >
    > ```sh
@@ -151,12 +155,6 @@ zoxide can be installed in 4 easy steps:
    > | [Chocolatey]    | `choco install zoxide`                |
    > | [conda-forge]   | `conda install -c conda-forge zoxide` |
    > | [Scoop]         | `scoop install zoxide`                |
-   >
-   > If you're using Cygwin, Git Bash, or MSYS2, use the install script instead:
-   >
-   > ```sh
-   > curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
-   > ```
 
    </details>
 
@@ -171,6 +169,12 @@ zoxide can be installed in 4 easy steps:
    > | DragonFly BSD | [DPorts]        | `pkg install zoxide`            |
    > | FreeBSD       | [FreshPorts]    | `pkg install zoxide`            |
    > | NetBSD        | [pkgsrc]        | `pkgin install zoxide`          |
+   >
+   > Or, run this command in your terminal:
+   >
+   > ```sh
+   > curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+   > ```
 
    </details>
 
@@ -192,7 +196,7 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Bash</summary>
 
-   > Add this to the **end** of your config file (usually `~/.bashrc`):
+   > Add this to the <ins>**end**</ins> of your config file (usually `~/.bashrc`):
    >
    > ```sh
    > eval "$(zoxide init bash)"
@@ -203,7 +207,7 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Elvish</summary>
 
-   > Add this to the **end** of your config file (usually `~/.elvish/rc.elv`):
+   > Add this to the <ins>**end**</ins> of your config file (usually `~/.elvish/rc.elv`):
    >
    > ```sh
    > eval (zoxide init elvish | slurp)
@@ -217,7 +221,7 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Fish</summary>
 
-   > Add this to the **end** of your config file (usually
+   > Add this to the <ins>**end**</ins> of your config file (usually
    > `~/.config/fish/config.fish`):
    >
    > ```fish
@@ -229,14 +233,14 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Nushell</summary>
 
-   > Add this to the **end** of your env file (find it by running `$nu.env-path`
+   > Add this to the <ins>**end**</ins> of your env file (find it by running `$nu.env-path`
    > in Nushell):
    >
    > ```sh
    > zoxide init nushell | save -f ~/.zoxide.nu
    > ```
    >
-   > Now, add this to the **end** of your config file (find it by running
+   > Now, add this to the <ins>**end**</ins> of your config file (find it by running
    > `$nu.config-path` in Nushell):
    >
    > ```sh
@@ -251,7 +255,7 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>PowerShell</summary>
 
-   > Add this to the **end** of your config file (find it by running
+   > Add this to the <ins>**end**</ins> of your config file (find it by running
    > `echo $profile` in PowerShell):
    >
    > ```powershell
@@ -263,7 +267,7 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Xonsh</summary>
 
-   > Add this to the **end** of your config file (usually `~/.xonshrc`):
+   > Add this to the <ins>**end**</ins> of your config file (usually `~/.xonshrc`):
    >
    > ```python
    > execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')
@@ -274,7 +278,7 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Zsh</summary>
 
-   > Add this to the **end** of your config file (usually `~/.zshrc`):
+   > Add this to the <ins>**end**</ins> of your config file (usually `~/.zshrc`):
    >
    > ```sh
    > eval "$(zoxide init zsh)"
@@ -289,7 +293,7 @@ zoxide can be installed in 4 easy steps:
    <details>
    <summary>Any POSIX shell</summary>
 
-   > Add this to the **end** of your config file:
+   > Add this to the <ins>**end**</ins> of your config file:
    >
    > ```sh
    > eval "$(zoxide init posix --hook prompt)"
@@ -501,6 +505,7 @@ Environment variables[^2] can be used for configuration. They must be set before
 [scoop]: https://github.com/ScoopInstaller/Main/tree/master/bucket/zoxide.json
 [slackbuilds]: https://slackbuilds.org/repository/15.0/system/zoxide/
 [slackbuilds-howto]: https://slackbuilds.org/howto/
+[solus packages]: https://github.com/getsolus/packages/tree/main/packages/z/zoxide/
 [t]: https://github.com/joshmedeski/t-smart-tmux-session-manager
 [telescope-zoxide]: https://github.com/jvgrootveld/telescope-zoxide
 [telescope.nvim]: https://github.com/nvim-telescope/telescope.nvim
