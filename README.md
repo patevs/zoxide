@@ -99,8 +99,9 @@ zoxide can be installed in 4 easy steps:
    > | CentOS 7+           | [Copr]                  | `dnf copr enable atim/zoxide` <br /> `dnf install zoxide`                                             |
    > | ~Debian 11+~[^1]    | ~[Debian Packages]~     | ~`apt install zoxide`~                                                                                |
    > | Devuan 4.0+         | [Devuan Packages]       | `apt install zoxide`                                                                                  |
+   > | Exherbo Linux       | [Exherbo packages]      | `cave resolve -x repository/rust` <br /> `cave resolve -x zoxide`                                     |
    > | Fedora 32+          | [Fedora Packages]       | `dnf install zoxide`                                                                                  |
-   > | Gentoo              | [GURU Overlay]          | `eselect repository enable guru` <br /> `emerge --sync guru` <br /> `emerge app-shells/zoxide`        |
+   > | Gentoo              | [Gentoo Packages]       | `emerge app-shells/zoxide`                                                                            |
    > | Manjaro             |                         | `pacman -S zoxide`                                                                                    |
    > | openSUSE Tumbleweed | [openSUSE Factory]      | `zypper install zoxide`                                                                               |
    > | ~Parrot OS~[^1]     |                         | ~`apt install zoxide`~                                                                                |
@@ -444,6 +445,7 @@ Environment variables[^2] can be used for configuration. They must be set before
 | [vim] / [neovim]      | Text editor                                  | [zoxide.vim]               |
 | [xplr]                | File manager                                 | [zoxide.xplr]              |
 | [xxh]                 | Transports shell configuration over SSH      | [xxh-plugin-prerun-zoxide] |
+| [yazi]                | File manager                                 | Natively supported         |
 | [zabb]                | Finds the shortest possible query for a path | Natively supported         |
 | [zsh-autocomplete]    | Realtime completions for zsh                 | Natively supported         |
 
@@ -471,6 +473,7 @@ Environment variables[^2] can be used for configuration. They must be set before
 [crates.io-badge]: https://img.shields.io/crates/v/zoxide?logo=rust&logoColor=white&style=flat-square
 [crates.io]: https://crates.io/crates/zoxide
 [debian packages]: https://packages.debian.org/stable/admin/zoxide
+[exherbo packages]: https://gitlab.exherbo.org/exherbo/rust/-/tree/master/packages/sys-apps/zoxide
 [devuan packages]: https://pkginfo.devuan.org/cgi-bin/package-query.html?c=package&q=zoxide
 [downloads-badge]: https://img.shields.io/github/downloads/ajeetdsouza/zoxide/total?logo=github&logoColor=white&style=flat-square
 [dports]: https://github.com/DragonFlyBSD/DPorts/tree/master/sysutils/zoxide
@@ -481,9 +484,9 @@ Environment variables[^2] can be used for configuration. They must be set before
 [fzf-installation]: https://github.com/junegunn/fzf#installation
 [fzf-man]: https://manpages.ubuntu.com/manpages/en/man1/fzf.1.html
 [fzf]: https://github.com/junegunn/fzf
+[gentoo packages]: https://packages.gentoo.org/packages/app-shells/zoxide
 [glob]: https://man7.org/linux/man-pages/man7/glob.7.html
 [guix]: https://packages.guix.gnu.org/packages/zoxide/
-[guru overlay]: https://github.com/gentoo-mirror/guru
 [homebrew]: https://formulae.brew.sh/formula/zoxide
 [issues]: https://github.com/ajeetdsouza/zoxide/issues/new
 [joshuto]: https://github.com/kamiyaa/joshuto
@@ -519,6 +522,7 @@ Environment variables[^2] can be used for configuration. They must be set before
 [xplr]: https://github.com/sayanarijit/xplr
 [xxh-plugin-prerun-zoxide]: https://github.com/xxh/xxh-plugin-prerun-zoxide
 [xxh]: https://github.com/xxh/xxh
+[yazi]: https://github.com/sxyazi/yazi
 [zabb]: https://github.com/Mellbourn/zabb
 [zoxide.el]: https://gitlab.com/Vonfry/zoxide.el
 [zoxide.vim]: https://github.com/nanotee/zoxide.vim
