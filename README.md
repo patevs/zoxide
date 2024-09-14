@@ -192,7 +192,7 @@ zoxide can be installed in 4 easy steps:
    >
    > | Repository | Instructions         |
    > | ---------- | -------------------- |
-   > | [Termux]   | `pkg install zoxide` |  
+   > | [Termux]   | `pkg install zoxide` |
    >
    > Or, run this command in your terminal:
    >
@@ -237,8 +237,23 @@ zoxide can be installed in 4 easy steps:
    > Add this to the <ins>**end**</ins> of your config file (usually
    > `~/.config/fish/config.fish`):
    >
-   > ```fish
+   > ```sh
    > zoxide init fish | source
+   > ```
+
+   </details>
+
+   <details>
+   <summary>Ksh</summary>
+
+   > Add this to the <ins>**end**</ins> of your config file (usually `~/.kshrc`):
+   >
+   > ```sh
+   > # ksh93
+   > eval "$(zoxide init ksh)"
+   >
+   > # mksh, oksh, etc.
+   > eval "$(zoxide init ksh --hook=prompt)"
    > ```
 
    </details>
