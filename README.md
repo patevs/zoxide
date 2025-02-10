@@ -62,6 +62,10 @@ z foo<SPACE><TAB>  # show interactive completions (zoxide v0.8.0+, bash 4.4+/fis
 
 Read more about the matching algorithm [here][algorithm-matching].
 
+<a href="https://app.warp.dev/drive/folder/zoxide-EyHNpQumHVWNcYB8GJgDxG?utm_source=github&utm_medium=warp_pack&utm_campaign=zoxide_20231001">
+  <img src="contrib/warp-packs-green.png" alt="Follow tutorial in Warp">
+</a>
+
 ## Installation
 
 zoxide can be installed in 4 easy steps:
@@ -90,7 +94,7 @@ zoxide can be installed in 4 easy steps:
    > | _Any_               | [guix]                  | `guix install zoxide`                                                                                 |
    > | _Any_               | [Linuxbrew]             | `brew install zoxide`                                                                                 |
    > | _Any_               | [nixpkgs]               | `nix-env -iA nixpkgs.zoxide`                                                                          |
-   > | AlmaLinux           |                         | `dnf install zoxide`                                                                                      |
+   > | AlmaLinux           |                         | `dnf install zoxide`                                                                                  |
    > | Alpine Linux 3.13+  | [Alpine Linux Packages] | `apk add zoxide`                                                                                      |
    > | Arch Linux          | [Arch Linux Extra]      | `pacman -S zoxide`                                                                                    |
    > | CentOS Stream       |                         | `dnf install zoxide`                                                                                  |
@@ -392,11 +396,13 @@ When calling `zoxide init`, the following flags are available:
   - `--cmd cd` would replace the `cd` command.
 - `--hook <HOOK>`
   - Changes how often zoxide increments a directory's score:
+
     | Hook            | Description                       |
     | --------------- | --------------------------------- |
     | `none`          | Never                             |
     | `prompt`        | At every shell prompt             |
     | `pwd` (default) | Whenever the directory is changed |
+
 - `--no-cmd`
   - Prevents zoxide from defining the `z` and `zi` commands.
   - These functions will still be available in your shell as `__zoxide_z` and
@@ -410,11 +416,13 @@ Environment variables[^2] can be used for configuration. They must be set before
 - `_ZO_DATA_DIR`
   - Specifies the directory in which the database is stored.
   - The default value varies across OSes:
+
     | OS          | Path                                     | Example                                    |
     | ----------- | ---------------------------------------- | ------------------------------------------ |
     | Linux / BSD | `$XDG_DATA_HOME` or `$HOME/.local/share` | `/home/alice/.local/share`                 |
     | macOS       | `$HOME/Library/Application Support`      | `/Users/Alice/Library/Application Support` |
     | Windows     | `%LOCALAPPDATA%`                         | `C:\Users\Alice\AppData\Local`             |
+
 - `_ZO_ECHO`
   - When set to 1, `z` will print the matched directory before navigating to
     it.
@@ -422,10 +430,12 @@ Environment variables[^2] can be used for configuration. They must be set before
   - Excludes the specified directories from the database.
   - This is provided as a list of [globs][glob], separated by OS-specific
     characters:
+
     | OS                  | Separator | Example                 |
     | ------------------- | --------- | ----------------------- |
     | Linux / macOS / BSD | `:`       | `$HOME:$HOME/private/*` |
     | Windows             | `;`       | `$HOME;$HOME/private/*` |
+
   - By default, this is set to `"$HOME"`.
 - `_ZO_FZF_OPTS`
   - Custom options to pass to [fzf] during interactive selection. See
