@@ -281,6 +281,18 @@ zoxide can be installed in 4 easy steps:
    </details>
 
    <details>
+   <summary>Tcsh</summary>
+
+   > Add this to the <ins>**end**</ins> of your config file (usually `~/.tcshrc`):
+   >
+   > ```sh
+   > zoxide init tcsh > ~/.zoxide.tcsh
+   > source ~/.zoxide.tcsh
+   > ```
+
+   </details>
+
+   <details>
    <summary>Xonsh</summary>
 
    > Add this to the <ins>**end**</ins> of your config file (usually `~/.xonshrc`):
@@ -323,7 +335,7 @@ zoxide can be installed in 4 easy steps:
    interactive selection. It can be installed from [here][fzf-installation].
 
    > **Note**
-   > The minimum supported fzf version is v0.33.0 on most platforms and v0.51.0 on Windows.
+   > The minimum supported fzf version is v0.51.0.
 
 4. **Import your data** <sup>(optional)</sup>
 
@@ -521,7 +533,7 @@ Environment variables[^2] can be used for configuration. They must be set before
 [linuxbrew]: https://formulae.brew.sh/formula-linux/zoxide
 [macports]: https://ports.macports.org/port/zoxide/summary
 [neovim]: https://github.com/neovim/neovim
-[nixpkgs]: https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/misc/zoxide/default.nix
+[nixpkgs]: https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/zo/zoxide/package.nix
 [nnn-autojump]: https://github.com/jarun/nnn/blob/master/plugins/autojump
 [nnn]: https://github.com/jarun/nnn
 [opensuse factory]: https://build.opensuse.org/package/show/openSUSE:Factory/zoxide

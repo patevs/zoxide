@@ -194,6 +194,7 @@ const completion: Fig.Spec = {
           "nushell",
           "posix",
           "powershell",
+          "tcsh",
           "xonsh",
           "zsh",
         ],
