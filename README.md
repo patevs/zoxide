@@ -36,7 +36,15 @@
 
 <hr />
 
-# zoxide
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./contrib/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./contrib/logo-light.svg">
+    <img alt="zoxide logo" src="./contrib/logo-light.svg" height="128" width="128">
+  </picture>
+  <br />
+  zoxide
+</h1>
 
 [![crates.io][crates.io-badge]][crates.io]
 [![Downloads][downloads-badge]][releases]
@@ -96,30 +104,29 @@ zoxide can be installed in 4 easy steps:
    >
    > Or, you can use a package manager:
    >
-   > | Distribution        | Repository                  | Instructions                                                                                          |
-   > | ------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------- |
-   > | **_Any_**           | **[crates.io]**             | `cargo install zoxide --locked`                                                                       |
-   > | _Any_               | [asdf]                      | `asdf plugin add zoxide https://github.com/nyrst/asdf-zoxide.git` <br /> `asdf install zoxide latest` |
-   > | _Any_               | [conda-forge]               | `conda install -c conda-forge zoxide`                                                                 |
-   > | _Any_               | [guix]                      | `guix install zoxide`                                                                                 |
-   > | _Any_               | [Linuxbrew]                 | `brew install zoxide`                                                                                 |
-   > | _Any_               | [nixpkgs]                   | `nix-env -iA nixpkgs.zoxide`                                                                          |
-   > | Alpine Linux 3.13+  | [Alpine Linux Packages]     | `apk add zoxide`                                                                                      |
-   > | Arch Linux          | [Arch Linux Extra]          | `pacman -S zoxide`                                                                                    |
-   > | ~Debian~[^1]    | ~[Debian Packages]~         | ~`apt install zoxide`~                                                                                    |
-   > | Devuan 4.0+         | [Devuan Packages]           | `apt install zoxide`                                                                                  |
-   > | Exherbo Linux       | [Exherbo packages]          | `cave resolve -x repository/rust` <br /> `cave resolve -x zoxide`                                     |
-   > | Fedora 32+          | [Fedora Packages]           | `dnf install zoxide`                                                                                  |
-   > | Gentoo              | [Gentoo Packages]           | `emerge app-shells/zoxide`                                                                            |
-   > | Manjaro             |                             | `pacman -S zoxide`                                                                                    |
-   > | openSUSE Tumbleweed | [openSUSE Factory]          | `zypper install zoxide`                                                                               |
-   > | ~Parrot OS~[^1]     |                             | ~`apt install zoxide`~                                                                                |
-   > | ~Raspbian~[^1]  | ~[Raspbian Packages]~       | ~`apt install zoxide`~                                                                                    |
-   > | Rhino Linux         | [Pacstall Packages]         | `pacstall -I zoxide-deb`                                                                              |
-   > | Slackware 15.0+     | [SlackBuilds]               | [Instructions][slackbuilds-howto]                                                                     |
-   > | Solus               | [Solus Packages]            | `eopkg install zoxide`                                                                                |
-   > | ~Ubuntu~[^1]        | ~[Ubuntu Packages]~         | ~`apt install zoxide`~                                                                                |
-   > | Void Linux          | [Void Linux Packages]       | `xbps-install -S zoxide`                                                                              |
+   > | Distribution        | Repository              | Instructions                                                      |
+   > | ------------------- | ----------------------- | ----------------------------------------------------------------- |
+   > | **_Any_**           | **[crates.io]**         | `cargo install zoxide --locked`                                   |
+   > | _Any_               | [conda-forge]           | `conda install -c conda-forge zoxide`                             |
+   > | _Any_               | [guix]                  | `guix install zoxide`                                             |
+   > | _Any_               | [Linuxbrew]             | `brew install zoxide`                                             |
+   > | _Any_               | [nixpkgs]               | `nix-env -iA nixpkgs.zoxide`                                      |
+   > | Alpine Linux 3.13+  | [Alpine Linux Packages] | `apk add zoxide`                                                  |
+   > | Arch Linux          | [Arch Linux Extra]      | `pacman -S zoxide`                                                |
+   > | ~~Debian~~[^1]      | ~~[Debian Packages]~~   | ~~`apt install zoxide`~~                                          |
+   > | Devuan 4.0+         | [Devuan Packages]       | `apt install zoxide`                                              |
+   > | Exherbo Linux       | [Exherbo packages]      | `cave resolve -x repository/rust` <br /> `cave resolve -x zoxide` |
+   > | Fedora 32+          | [Fedora Packages]       | `dnf install zoxide`                                              |
+   > | Gentoo              | [Gentoo Packages]       | `emerge app-shells/zoxide`                                        |
+   > | Manjaro             |                         | `pacman -S zoxide`                                                |
+   > | openSUSE Tumbleweed | [openSUSE Factory]      | `zypper install zoxide`                                           |
+   > | ~~Parrot OS~~[^1]   |                         | ~~`apt install zoxide`~~                                          |
+   > | ~~Raspbian~~[^1]    | ~~[Raspbian Packages]~~ | ~~`apt install zoxide`~~                                          |
+   > | Rhino Linux         | [Pacstall Packages]     | `pacstall -I zoxide-deb`                                          |
+   > | Slackware 15.0+     | [SlackBuilds]           | [Instructions][slackbuilds-howto]                                 |
+   > | Solus               | [Solus Packages]        | `eopkg install zoxide`                                            |
+   > | ~~Ubuntu~~[^1]      | ~~[Ubuntu Packages]~~   | ~~`apt install zoxide`~~                                          |
+   > | Void Linux          | [Void Linux Packages]   | `xbps-install -S zoxide`                                          |
 
    </details>
 
@@ -128,14 +135,13 @@ zoxide can be installed in 4 easy steps:
 
    > To install zoxide, use a package manager:
    >
-   > | Repository      | Instructions                                                                                          |
-   > | --------------- | ----------------------------------------------------------------------------------------------------- |
-   > | **[crates.io]** | `cargo install zoxide --locked`                                                                       |
-   > | **[Homebrew]**  | `brew install zoxide`                                                                                 |
-   > | [asdf]          | `asdf plugin add zoxide https://github.com/nyrst/asdf-zoxide.git` <br /> `asdf install zoxide latest` |
-   > | [conda-forge]   | `conda install -c conda-forge zoxide`                                                                 |
-   > | [MacPorts]      | `port install zoxide`                                                                                 |
-   > | [nixpkgs]       | `nix-env -iA nixpkgs.zoxide`                                                                          |
+   > | Repository      | Instructions                          |
+   > | --------------- | ------------------------------------- |
+   > | **[crates.io]** | `cargo install zoxide --locked`       |
+   > | **[Homebrew]**  | `brew install zoxide`                 |
+   > | [conda-forge]   | `conda install -c conda-forge zoxide` |
+   > | [MacPorts]      | `port install zoxide`                 |
+   > | [nixpkgs]       | `nix-env -iA nixpkgs.zoxide`          |
    >
    > Or, run this command in your terminal:
    >
@@ -270,7 +276,7 @@ zoxide can be installed in 4 easy steps:
    > ```
    >
    > **Note:**
-   > zoxide only supports Nushell v0.89.0+.
+   > zoxide only supports Nushell v0.106.0+.
 
    </details>
 
@@ -357,14 +363,14 @@ zoxide can be installed in 4 easy steps:
    zoxide import <plugin>
    ```
 
-   | Plugin     | Command                   |
-   | ---------- | ------------------------- |
-   | atuin      | `zoxide import atuin`     |
-   | autojump   | `zoxide import autojump`  |
-   | fasd       | `zoxide import fasd`      |
-   | z          | `zoxide import z`         |
-   | z.lua      | `zoxide import z.lua`     |
-   | zsh-z      | `zoxide import zsh-z`     |
+   | Plugin   | Command                  |
+   | -------- | ------------------------ |
+   | atuin    | `zoxide import atuin`    |
+   | autojump | `zoxide import autojump` |
+   | fasd     | `zoxide import fasd`     |
+   | z        | `zoxide import z`        |
+   | z.lua    | `zoxide import z.lua`    |
+   | zsh-z    | `zoxide import zsh-z`    |
 
 ## Configuration
 
@@ -399,11 +405,11 @@ Environment variables[^2] can be used for configuration. They must be set before
   - Specifies the directory in which the database is stored.
   - The default value varies across OSes:
 
-    | OS          | Path                                     | Example                                    |
-    | ----------- | ---------------------------------------- | ------------------------------------------ |
-    | Linux / BSD | `$XDG_DATA_HOME` or `$HOME/.local/share` | `/home/alice/.local/share`                 |
-    | macOS       | `$HOME/Library/Application Support`      | `/Users/Alice/Library/Application Support` |
-    | Windows     | `%LOCALAPPDATA%`                         | `C:\Users\Alice\AppData\Local`             |
+    | OS          | Path                                                   | Example                                           |
+    | ----------- | ------------------------------------------------------ | ------------------------------------------------- |
+    | Linux / BSD | `$XDG_DATA_HOME/zoxide` or `$HOME/.local/share/zoxide` | `/home/alice/.local/share/zoxide`                 |
+    | macOS       | `$HOME/Library/Application Support/zoxide`             | `/Users/Alice/Library/Application Support/zoxide` |
+    | Windows     | `%LOCALAPPDATA%\zoxide`                                | `C:\Users\Alice\AppData\Local\zoxide`             |
 
 - `_ZO_ECHO`
   - When set to 1, `z` will print the matched directory before navigating to
@@ -432,30 +438,31 @@ Environment variables[^2] can be used for configuration. They must be set before
 
 ## Third-party integrations
 
-| Application           | Description                                  | Plugin                     |
-| --------------------- | -------------------------------------------- | -------------------------- |
-| [aerc]                | Email client                                 | Natively supported         |
-| [alfred]              | macOS launcher                               | [alfred-zoxide]            |
-| [clink]               | Improved cmd.exe for Windows                 | [clink-zoxide]             |
-| [emacs]               | Text editor                                  | [zoxide.el]                |
-| [felix]               | File manager                                 | Natively supported         |
-| [joshuto]             | File manager                                 | Natively supported         |
-| [lf]                  | File manager                                 | See the [wiki][lf-wiki]    |
-| [nnn]                 | File manager                                 | [nnn-autojump]             |
-| [ranger]              | File manager                                 | [ranger-zoxide]            |
-| [raycast]             | macOS launcher                               | [raycast-zoxide]           |
-| [rfm]                 | File manager                                 | Natively supported         |
-| [sesh]                | `tmux` session manager                       | Natively supported         |
-| [telescope.nvim]      | Fuzzy finder for Neovim                      | [telescope-zoxide]         |
-| [tmux-session-wizard] | `tmux` session manager                       | Natively supported         |
-| [tmux-sessionx]       | `tmux` session manager                       | Natively supported         |
-| [vim] / [neovim]      | Text editor                                  | [zoxide.vim]               |
-| [xplr]                | File manager                                 | [zoxide.xplr]              |
-| [xxh]                 | Transports shell configuration over SSH      | [xxh-plugin-prerun-zoxide] |
-| [yazi]                | File manager                                 | Natively supported         |
-| [zabb]                | Finds the shortest possible query for a path | Natively supported         |
-| [zesh]                | `zellij` session manager                     | Natively supported         |
-| [zsh-autocomplete]    | Realtime completions for zsh                 | Natively supported         |
+| Application           | Description                                  | Plugin                                  |
+| --------------------- | -------------------------------------------- | --------------------------------------- |
+| [aerc]                | Email client                                 | Natively supported                      |
+| [alfred]              | macOS launcher                               | [alfred-zoxide]                         |
+| [clink]               | Improved cmd.exe for Windows                 | [clink-zoxide]                          |
+| [emacs]               | Text editor                                  | [zoxide.el]                             |
+| [felix]               | File manager                                 | Natively supported                      |
+| [joshuto]             | File manager                                 | Natively supported                      |
+| [lf]                  | File manager                                 | See the [wiki][lf-wiki]                 |
+| [nnn]                 | File manager                                 | [nnn-autojump]                          |
+| [ranger]              | File manager                                 | [ranger-zoxide]                         |
+| [raycast]             | macOS launcher                               | [raycast-zoxide]                        |
+| [rfm]                 | File manager                                 | Natively supported                      |
+| [sesh]                | `tmux` session manager                       | Natively supported                      |
+| [superfile]           | File manager                                 | [Natively supported][superfile-plugins] |
+| [telescope.nvim]      | Fuzzy finder for Neovim                      | [telescope-zoxide]                      |
+| [tmux-session-wizard] | `tmux` session manager                       | Natively supported                      |
+| [tmux-sessionx]       | `tmux` session manager                       | Natively supported                      |
+| [vim] / [neovim]      | Text editor                                  | [zoxide.vim]                            |
+| [xplr]                | File manager                                 | [zoxide.xplr]                           |
+| [xxh]                 | Transports shell configuration over SSH      | [xxh-plugin-prerun-zoxide]              |
+| [yazi]                | File manager                                 | Natively supported                      |
+| [zabb]                | Finds the shortest possible query for a path | Natively supported                      |
+| [zesh]                | `zellij` session manager                     | Natively supported                      |
+| [zsh-autocomplete]    | Realtime completions for zsh                 | Natively supported                      |
 
 [^1]:
     Debian / Ubuntu derivatives update their packages very slowly. If you're
@@ -472,7 +479,6 @@ Environment variables[^2] can be used for configuration. They must be set before
 [algorithm-matching]: https://github.com/ajeetdsouza/zoxide/wiki/Algorithm#matching
 [alpine linux packages]: https://pkgs.alpinelinux.org/packages?name=zoxide
 [arch linux extra]: https://archlinux.org/packages/extra/x86_64/zoxide/
-[asdf]: https://github.com/asdf-vm/asdf
 [builtwithnix-badge]: https://img.shields.io/badge/builtwith-nix-7d81f7?logo=nixos&logoColor=white&style=flat-square
 [builtwithnix]: https://builtwithnix.org/
 [chocolatey]: https://community.chocolatey.org/packages/zoxide
@@ -522,12 +528,14 @@ Environment variables[^2] can be used for configuration. They must be set before
 [slackbuilds]: https://slackbuilds.org/repository/15.0/system/zoxide/
 [slackbuilds-howto]: https://slackbuilds.org/howto/
 [solus packages]: https://github.com/getsolus/packages/tree/main/packages/z/zoxide/
+[superfile]: https://github.com/yorukot/superfile
+[superfile-plugins]: https://superfile.dev/list/plugin-list/
 [telescope-zoxide]: https://github.com/jvgrootveld/telescope-zoxide
 [telescope.nvim]: https://github.com/nvim-telescope/telescope.nvim
 [termux]: https://github.com/termux/termux-packages/tree/master/packages/zoxide
 [tmux-session-wizard]: https://github.com/27medkamal/tmux-session-wizard
 [tmux-sessionx]: https://github.com/omerxx/tmux-sessionx
-[tutorial]: contrib/tutorial.webp
+[tutorial]: contrib/tutorial.gif
 [ubuntu packages]: https://packages.ubuntu.com/jammy/zoxide
 [vim]: https://github.com/vim/vim
 [void linux packages]: https://github.com/void-linux/void-packages/tree/master/srcpkgs/zoxide

@@ -21,7 +21,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - uses: actions-rs/toolchain@v1
@@ -46,11 +46,11 @@ jobs:
           authToken: ${{ env.CACHIX_AUTH_TOKEN }}
           name: zoxide
       - name: Setup cache
-        uses: Swatinem/rust-cache@v2.9.1
+        uses: Swatinem/rust-cache@v2.9.2
         with:
           key: ${{ matrix.os }}
       - name: Install just
-        uses: taiki-e/install-action@v2
+        uses: taiki-e/install-action@v2.87.21
         with:
           tool: just
       - name: Run lints + tests
